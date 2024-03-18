@@ -6,12 +6,20 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/09 21:59:34 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/03/12 16:11:34 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/03/13 20:23:34 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/*---------------------DESCRIPTION------------------------*/
+/*		1)	Initialize variables: i, sign, counter to 0.
+		2)	Skip leading whitespace.
+		3)	Handle sign: Track sign (positive or negative),
+			allowing only one sign character.
+		4)	Parse digits: Convert each digit character to integer, accumulate into i.
+		5)	Return result: Final i multiplied by sign.
+*/
 int	ft_atoi(const char *str)
 {
 	int	i;

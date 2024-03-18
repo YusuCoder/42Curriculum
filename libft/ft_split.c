@@ -6,7 +6,7 @@
 /*   By: ryusupov <ryusupov@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/11 12:12:38 by ryusupov          #+#    #+#             */
-/*   Updated: 2024/03/11 14:29:32 by ryusupov         ###   ########.fr       */
+/*   Updated: 2024/03/15 10:53:26 by ryusupov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,21 @@ static char	*extract_word(const char *str, char c)
 	while (str[i] && str[i] != c)
 		i++;
 	return (ft_substr(str, 0, i));
+}
+
+static void	free_array(char **array, size_t i)
+{
+	int	i;
+
+	if (array == NULL)
+		return ;
+	i = 0;
+	while (array[i] != NULL)
+	{
+		free(array[i]);
+		i++;
+	}
+	free(array);
 }
 
 char	**ft_split(char const *str, char set)
